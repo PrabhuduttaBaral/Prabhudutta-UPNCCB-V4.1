@@ -1,0 +1,23 @@
+"""
+==========================================
+Prabhudutta-UPNCCB V4.1
+Run Application
+==========================================
+"""
+
+import sys
+import os
+
+# Add src folder to Python path
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SRC_DIR = os.path.join(BASE_DIR, "src")
+
+if SRC_DIR not in sys.path:
+    sys.path.insert(0, SRC_DIR)
+
+from main import CashWithdrawalApp
+
+
+if __name__ == "__main__":
+    app = CashWithdrawalApp()
+    app.run()
